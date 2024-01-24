@@ -16,7 +16,7 @@ export function modificaNick(nick) {
     }
 }
 export function modificaData(inputFecha) {
-    // Extraer componentes sin usar slice
+    
     const anyo = inputFecha[0] + inputFecha[1];
     const numeroMes = inputFecha[3] + inputFecha[4];
     const dia = parseInt(inputFecha[6] + inputFecha[7], 10); // Convertir a número para quitar el cero delante si existe
@@ -86,7 +86,16 @@ export const dias = (textoFecha) => {
     return diferenciaEnDias
   }
   
+  function buscar() {
+    const inputNick = document.getElementById('buscadorNick').value;
+    console.log('nombre buscado: ', inputNick);
 
+    // Filtra las partidas que coinciden con el nombre buscado
+    const partidasFiltradas = juegos.filter(partida => partida.nick.toLowerCase().includes(inputNick.toLowerCase()));
+
+    // Pinta la tabla con las partidas filtradas
+    pintaTablaFiltrada(partidasFiltradas);
+}
 
 
 

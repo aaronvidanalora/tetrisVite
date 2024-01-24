@@ -45,7 +45,7 @@ describe('dias', () => {
   it('debería calcular los días transcurridos correctamente', () => {
     const fechaInicial = new Date('2023-09-07T03:24:00');
     const fechaActual = new Date('2023-09-17T03:24:00');
-    const resultado = dias('24/01/01T21:00:00');
+    const resultado = dias('24/01/05T21:00:00');
     // Esperamos que la función calcule los días transcurridos correctamente
 	// Hay que tener en cuenta el día que se pasa el test para que el resultado sea 10 u el que corresponda. Modifica el 10 por los días que han pasado en el momento de pasar el test
     expect(resultado).to.equal(10);
